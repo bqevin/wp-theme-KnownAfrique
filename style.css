@@ -1,3 +1,19 @@
+/*
+Theme Name: KnownAfrique
+Theme URI: digitarttechnologies.com/themes/KnownAfrique
+Description: WordPress theme for KnownAfrique
+Version: 1.0 
+Author: Kevin Barassa / +254724778017
+Author URI: kevinbarasa.com
+Tags: Law, Web App, Knowledge
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+*/
+
+
+
+
+
 /* ! normalize.css v1.0.0 | MIT License | git.io/normalize */
 
 /* ==========================================================================
@@ -59,12 +75,14 @@ html {
 * elements.
 */
 html, button, input, select, textarea {
-    font-family: sans-serif;
-    font-family: 'Nunito', sans-serif;
+     font-family:'Open Sans', sans-serif;
+   
 }
 html, body {
     overflow-x: hidden;
     width: 100%;
+     font-family:'Open Sans', sans-serif;
+     font-weight: 300;
 }
 
 /*
@@ -72,7 +90,8 @@ html, body {
 */
 body {
     margin: 0;
-    font-family: 'Nunito', sans-serif;
+    font-family:'Open Sans', sans-serif;
+     font-weight: 300;
 }
 
 /*
@@ -114,26 +133,38 @@ Typography
 h1 {
     margin: 0.67em 0;
     font-size: 2em;
+     font-family: "Open Sans",sans-serif;
+  font-weight: 300;
 }
 h2 {
     margin: 0.83em 0;
     font-size: 1.5em;
+     font-family: "Open Sans",sans-serif;
+  font-weight: 300;
 }
 h3 {
     margin: 1em 0;
     font-size: 1.17em;
+     font-family: "Open Sans",sans-serif;
+  font-weight: 300;
 }
 h4 {
     margin: 1.33em 0;
     font-size: 1em;
+     font-family: "Open Sans",sans-serif;
+  font-weight: 300;
 }
 h5 {
     margin: 1.67em 0;
     font-size: 0.83em;
+     font-family: "Open Sans",sans-serif;
+  font-weight: 300;
 }
 h6 {
     margin: 2.33em 0;
     font-size: 0.75em;
+     font-family: "Open Sans",sans-serif;
+  font-weight: 300;8
 }
 
 /*
@@ -475,7 +506,7 @@ Buttons
     /*background-color: #E5D038;
     color: #000;*/
     font-size: 16px;
-    background-color: #D1B618;
+    background-color: #E5D038;
     color: #000;
 }
 .use-btn:hover, .use-btn:focus {
@@ -673,7 +704,7 @@ Features Slider
     position: relative;
     padding: 11% 100px 10% 100px;
     height: 400px;
-    background-color: #94712A;
+    background-color: #ffffff;
     //background: url("images/strip.png");
 }
 .features-slider ul {
@@ -686,20 +717,25 @@ Features Slider
 }
 .features-slider li h1 {
     margin-bottom: 15px;
-    color: #fff;
+    color: #89702B;
     font-weight: 400;
     font-size: 22px;
 }
 .features-slider li p {
-    color: #fff;
+    color: #333;
     font-size: 14px;
+    font-family:'Open Sans', sans-serif;
+     font-weight: 400;
 }
 .features-intro-img {
     position: relative
 }
 .slides li h1 {
+    font-family:'Open Sans', sans-serif;
+     font-weight: 300;
+
     margin: 0;
-    padding: 0;
+    padding-bottom: 10px;
 }
 .features-slider .flickity-page-dots {
     text-align: left;
@@ -710,21 +746,32 @@ Features Slider
     margin: 0 12px 0 0;
 }
 
+
+
 /* ==========================================================================
 Features List
 ========================================================================== */
-.features-list {
-    padding: 130px 0
+
+#team {
+    background-color: #fff;
 }
+.features-list {
+    padding: 130px 0;
+    background-color: #fafafa; 
+}
+
 .features-list h1 {
-    margin: 0 0 10px 0;
-    padding: 0;
-    color: #24374b;
-    font-size: 20px;
+  font-family: "Open Sans",sans-serif;
+  font-weight: 300;
+  margin: 0px;
+  padding-bottom: 10px;
+  color: #89702B;
 }
 .features-list p {
-    margin-bottom: 20px;
-    color: #778899;
+    font-family: "Open Sans",sans-serif;
+font-weight: 300 ;
+    margin-bottom: 10px;
+    color: #333;
 }
 .feature-content {
     display: inline-block;
@@ -934,13 +981,14 @@ Screenshots
 Download Now
 ========================================================================== */
 .download {
-    padding: 120px 0;
-    background-color: #89702B; //#3f6184;
+    padding: 60px 0;
+    background-color:#E5D038;
 }
 .download h1 {
     margin: 0 0 15px 0;
     color: #fff;
-    font-weight: 400;
+     font-family: "Open Sans",sans-serif;
+  font-weight: 300;
     font-size: 40px;
 }
 

@@ -35,6 +35,7 @@ $(document).ready(function() {
 		cellAlign: 'left',
 		contain: true,
 		prevNextButtons: false,
+		autoPlay: true,
 		imagesLoaded: true
 	});
 
@@ -97,8 +98,3 @@ $('a[href*=#]:not([href=#])').click(function() {
 		}
 	}
 });
-
-
-
-,skd
-sdiosdiosdo

@@ -1,19 +1,9 @@
 <footer style="text-align:justify;">
 <div class="container" id="contact">
 <div class="col-md-12 text-center">
-	<div class="row">
-	<h2 style="color: #E5D038;">Social Media</h2>
-	<div>
-	<a href="#" class="download-btn"><i class="fa fa-twitter fa-2x"></i></a>
-	<a href="#" class="download-btn"><i class="fa fa-google-plus fa-2x"></i></a>
-	<a href="#" class="download-btn"><i class="fa fa-facebook fa-2x"></i></a>
-	<a href="#" class="download-btn"><i class="fa fa-youtube fa-2x"></i></a>	
-	</div>
-	<br><br><br>
-	
-	</div>
+
 		<div class="col-md-2">
-		<h4 style="color: rgba(171, 133, 25, 0.89);">Physical Location</h4>
+		<h4 style="color: #E5D038">Physical Location</h4>
 		<!-- 	<h1 class="footer-logo" style="color:#8C6239; font-size:1.5em;">
 			<img src="img/logo-blue.png" alt="Known Afrique LLP"> 
 			</h1> -->
@@ -30,9 +20,12 @@
 			</p>
 		</div>
 		<div class="col-md-7">
-		<form name="sentMessage"  id="contactForm" style="width: 170%;" novalidate>
-		<h4 style="color: rgba(171, 133, 25, 0.89); ">Lets get in touch!</h4>
-		      <div class="col-lg-7 col-xs-6 text-center">
+		<h4 style="color: #E5D038 ">Lets get in touch!</h4>
+		<?php echo do_shortcode('[contact-form-7 id="43" title="Contact form 1"]'); ?>
+		
+		<!--      <div class="col-lg-7 col-xs-6 text-center">
+		        
+
 		          <div class="form-group">
 		              <input type="text" class="form-control" name="contactName" placeholder="Your Name *" id="name" required data-validation-required-message="Please enter your name.">
 		              <p class="help-block text-danger"></p>
@@ -55,14 +48,24 @@
 		          <div id="success"></div>
 		          <button type="submit" class="btn btn-xl">Send Message</button>
 		      </div>
-		</form>
+		</form> -->
 		</div>
 		<div class="col-md-3">
-    	<h4 style="color: rgba(171, 133, 25, 0.89);">Join our Discussions</h4>
+    	<h4 style="color: #E5D038">Join our Discussions</h4>
 				<span>
 					<p> We at KnownAfrique are here to let you know the law. In this respect, we have a feature rich forum which you can use to engage with law practitioners and other members of the society to discuss matters relating to law.
 						You can ask any question related to legal matters and our team will be at hand to provide the necessary information and support. </p>
 				</span>
+					<div class="row">
+					<div>
+					<a href="#"><i class="fa fa-twitter fa-2x" style="color:#fff ; padding:10px"></i></a>
+					<a href="#" ><i class="fa fa-google-plus fa-2x" style="color:#fff ; padding:10px"></i></a>
+					<a href="#" ><i class="fa fa-facebook fa-2x" style="color:#fff ; padding:10px"></i></a>
+					<a href="#" ><i class="fa fa-youtube fa-2x" style="color:#fff ; padding:10px"></i></a>	
+					</div>
+					<br><br><br>
+					
+					</div>
 		</div>
 	</div>
 	<br><br><br><br>
@@ -87,7 +90,7 @@
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 <script src="<?php bloginfo('template_directory'); ?>/js/min/toucheffects-min.js"></script>
 <script src="<?php bloginfo('template_directory'); ?>/js/modernizr.custom.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="<?php bloginfo('template_directory'); ?>/js/jquery-1.11.1.min.js"></script>
 <script src="<?php bloginfo('template_directory'); ?>/js/flickity.pkgd.min.js"></script>
 <script src="<?php bloginfo('template_directory'); ?>/js/jquery.fancybox.pack.js"></script>
 <!-- Include all compiled plugins (below), or include individual files as needed -->

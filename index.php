@@ -40,68 +40,80 @@ if(isset($_POST['submitted'])) {
 } ?>
 <?php get_header(); ?>
 
-<section class="features-intro" id="about">
+<section id="about" class="features-intro">
 <div class="container-fluid">
 <div class="row">
 <div class="col-md-6 nopadding features-intro-img">
 <div class="features-bg">
 <div class="texture-overlay"></div>
-<div class="features-img wp1">
-<!-- 	<img src="img/html5-logo.png" alt="HTML5 Logo"> -->
-</div>
+<div class="features-img wp1"><!-- 	<img src="img/html5-logo.png" alt="HTML5 Logo"> --></div>
 </div>
 </div>
 <div class="col-md-6 nopadding">
 <div class="features-slider">
-<ul class="slides" id="featuresSlider">
-	<li>
-		<h1>The Inspiration behind KnownAfrique</h1>
-		<p>KnownAfriqueLLP is a Law Social Enterprise that is driven by the need to solve social problems through legal solutions. We set out to promote easy access to the law within the existing technological platforms. We are incorporated in Kenya under LLP Registration No. 2014/125. </p>
-		<p><a href="#features" class="arrow-btn">Find out more!<i class="fa fa-long-arrow-right"></i></a></p>
+
+<?php
+$slides = new WP_Query('post_type=featured_slide');
+?>
+<ul id="featuresSlider" class="slides">
+    <?php while ($slides->have_posts()): $slides->the_post(); ?>
+        
+
+       	<li>
+  <a href="<?php the_permalink(); ?>"><h1> <?php the_title(); ?></h1></a>
+<?php the_content(); ?>
+<a class="arrow-btn" href="<?php the_permalink(); ?>">Find out more!<i class="fa fa-long-arrow-right"></i></a></li>
 	</li>
-	<li>
-		<h1>Learn Law before it indicts you</h1>
-		<p> We at KnownAfrique are here to let you know the law. In this respect, we have a feature rich forum which you can use to engage with law practitioners and other members of the society to discuss matters relating to law. </p>
-		<p><a href="#" class="arrow-btn">Find out more!<i class="fa fa-long-arrow-right"></i></a></p>
-	</li>
-	<li>
-		<h1>Dangerous Implications </h1>
-		<p>You can ask any question related to legal matters and our team will be at hand to provide the necessary information and support.</p>
-		<p><a href="#" class="arrow-btn">Find out more! <i class="fa fa-long-arrow-right"></i></a></p>
-	</li>
+
+    <?php endwhile; ?>
 </ul>
-</div>
+
 </div>
 </div>
 </div>
 </section>
-
-<section class="features-list" >
+<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+	<section class="features-list">
 <div class="container">
 <div class="row">
 <div class="col-lg-12 text-center">
-<h1 style="font-size:25px;">About Us</h1>
-<h3 style="color: rgb(132, 132, 132); line-height: 30px;">
-KnownAfriqueLLP is a Law Social Enterprise that is driven by the need to solve social problems through legal solutions. 
-We set out to promote easy access to the law within the existing technological platforms. We are incorporated in Kenya under 
-LLP Registration No. 2014/125. 
-</h3>
+<h1 style="font-size: 25px;">About Us</h1>
+   <?php the_content(); ?>
+
+</div>
+</div>
+</div>
+</section>
+	<?php endwhile; else: ?>
+	<p><?php _e('Sorry, no posts matched your criteria.'); ?></p>
+<?php endif; ?>
+
+
+<!-- Team Section -->
+
+<section id="team" class="features-list" >
+<div class="container">
+<div class="row">
+<div class="col-lg-8 col-lg-offset-2 text-center">
+<h2 class="section-heading" style="font-family: 'Open Sans',sans-serif;font-weight: 300;margin: 0px;padding-bottom: 10px;color: #89702B;">Our Team</h2>
+<?php echo do_shortcode("[team id='44' ]"); ?>
+
 </div>
 </div>
 </div>
 </section>
 
-<?php get_sidebar(); ?>
-
-<section class="download" id="download">
+<section id="download" class="download">
 <div class="container">
 <div class="row">
 <div class="col-md-12 text-center wp4">
 <h1>Seen Enough?</h1>
-<a href="#" class="download-btn">Download <strong> KnownAfrique </strong> App! <i class="fa fa-download"></i></a>
+<a class="download-btn" href="#">Download <strong> KnownAfrique </strong> App! <i class="fa fa-download"></i></a>
+
 </div>
 </div>
 </div>
 </section>
 
 <?php get_footer(); ?>
+	

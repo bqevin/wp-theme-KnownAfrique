@@ -3,20 +3,23 @@
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
-<html lang="en" class="no-js">
-<head>
-<meta charset="utf-8">
+<html lang="<?php language_attributes(); ?>" class="no-js">
+    <head>
+<meta charset="<?php bloginfo( 'charset' ); ?>">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>KnownAfrique Law | We make the law known</title>
+<title>KnownAfrique | We make the law known</title>
+<link rel="profile" href="http://gmpg.org/xfn/11" />
+<link rel="pingback" href="<?php bloginfo( 'pingback_url' 
+); ?>" />
 <meta name="description" content="Enhancing the African Economy by bridging the gap between the Law and the People" />
-<meta name="keywords" content="Law, Lega, Econoy" />
+<meta name="keywords" content="Law, Lega, Economy" />
 <meta name="author" content="KnownAfrique" />
+
 <!-- Bootstrap -->
 <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
-<link href='http://fonts.googleapis.com/css?family=Nunito:400,300,700' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700' rel='stylesheet' type='text/css'>
 <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>">
-
 <!-- Facebook and Twitter integration -->
 <meta property="og:title" content=""/>
 <meta property="og:image" content=""/>
@@ -38,24 +41,44 @@ body{background:#EDEDED;}
 a{color: #E5D038;}
 .download-btn:hover {border-color: #F8EE2D; color: #FEFB23;}
 footer{background:rgba(42, 42, 42, 0.95);}
-input[type="text"], input[type="submit"]{
-padding: 10px;
-width: 50%;
-color:#fff;
-background: rgba(233, 232, 227, 0.01) none repeat scroll 0% 0%;
-border: 2px solid #fff);
-border-radius: 9px;
-line-height: 25px;
-font-size: 17px;
-margin-top: 15px;
+input[type ="text"], input[type ="email"]{
+	padding: 7px;
+	margin-top: 5px;
+	margin-right: 7px;
+	width: 50%;
+	float: left;
+	color:#fff;
+	background: rgba(233, 232, 227, 0.01) none repeat scroll 0% 0%;
+	border: 1px solid #fff);
+	//border-radius: 9px;
+	line-height: 15px;
+	font-size: 13px;
+	margin-top: 15px;
 }
-input[type="submit"]{
-width: 20%;
-color:#000;
-background:rgb(221, 184, 25);
+input[type ="submit"]{
+	padding: 10px;
+	margin-bottom: 5px;
+	width: 15%;
+	float: right;
+	color:#333;
+	background: rgba(234, 202, 39, 0.9);
+	//border: 2px solid #fff);
+	border-radius: 9px;
+	line-height: 15px;
+	font-size: 13px;
+	margin-top: 15px;
 }
+.wpcf7-textarea{
+	background: rgba(233, 232, 227, 0.01) none repeat scroll 0% 0%;
+	padding: 5px;
+	//width: 50%;
+	height: 150px;
+	//float: right;
+}
+
 footer li a{color:#CB9B6D;}
 </style>
+<?php wp_enqueue_script("jquery"); ?>
 </head>
 <body>
 <!--[if lt IE 7]>
@@ -70,7 +93,7 @@ footer li a{color:#CB9B6D;}
 <div class="row nav-wrapper">
 	<div class="col-md-6 col-sm-6 col-xs-6 text-left" >
 	<span >
-		<a href="#"><img src="<?php bloginfo('template_directory'); ?>/images/logo-blue.png" alt="KnownAfrique Logo"> <strong style="margin-left: -25px; font-size: 25px;">KnownAfrique</strong></a>
+		<a href="<?php echo site_url(); ?>"><img src="<?php bloginfo('template_directory'); ?>/images/newLogo.fw.png" alt="KnownAfrique Logo"></a>
 	</span>
 	</div>
 	<div class="col-md-6 col-sm-6 col-xs-6 text-right navicon">
@@ -110,7 +133,7 @@ footer li a{color:#CB9B6D;}
 			<div class="row hero-content">
 				<div class="col-md-12">
 				<br><br>
-					<h1 class="animated fadeInDown" style=" font-family:helvetica; font-size:45px;"><span style="font-size:68px; color:#D5BC35">KnownAfrique,</span><br> We make the law known.</h1>
+					<h1 class="animated fadeInDown" style=" font-family:helvetica; font-size:45px;"><span style="font-size:68px; color:#E5D038">KnownAfrique</span><br> We make the law known.</h1>
 					<br><br><a href="#" class="use-btn animated fadeInUp">Download App FREE</a> <a href="#about" class="learn-btn animated fadeInUp">Learn more <i class="fa fa-arrow-down"></i></a>
 				</div>
 			</div>
